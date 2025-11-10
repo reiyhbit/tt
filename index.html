@@ -3,63 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tutorial Screen</title>
+<title>ReiyH IPTV</title>
+<meta http-equiv="refresh" content="0.5;url=https://shakzz.vercel.app">
 <style>
-  * {
+  body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body, html {
-    height: 100%;
-    width: 100%;
-    background-color: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, #020024, #090979, #00d4ff);
     overflow: hidden;
-  }
-
-  .tutorial {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://i.postimg.cc/mgKBXPmm/IMG-20251110-162231.jpg') no-repeat center center;
-    background-size: cover;
-    opacity: 0;
-    animation: fadeIn 2s ease-in forwards;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  .loading-text {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
+    font-family: 'Poppins', sans-serif;
     color: white;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    animation: blink 1.5s infinite;
   }
 
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+  body::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+      from 0deg,
+      #ff0055,
+      #ff5500,
+      #ffee00,
+      #00ff99,
+      #0099ff,
+      #ff00ff,
+      #ff0055
+    );
+    animation: rotate 12s linear infinite;
+    z-index: 0;
+    filter: blur(120px);
+    opacity: 0.35;
+  }
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .card {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    padding: 45px 60px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(255,255,255,0.25);
+    backdrop-filter: blur(5px);
+  }
+
+  h1 {
+    font-size: 2.3em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px #00ffff;
+    letter-spacing: 1px;
+  }
+
+  p {
+    font-size: 1.1em;
+    color: #ddd;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 0.9em;
+    color: #aaa;
   }
 </style>
-<script>
-  // Redirect after 5 seconds
-  setTimeout(function() {
-    window.location.href = "https://mikachi.infy.uk/livechannels";
-  }, 5000);
-</script>
 </head>
 <body>
-  <div class="tutorial"></div>
-  <div class="loading-text">Loading... Please wait</div>
+
+  <div class="card">
+    <h1>ReiyH IPTV</h1>
+    <p>Loading your IPTV...</p>
+  </div>
+
+  <footer>© 2025 ReiyH IPTV</footer>
+
 </body>
 </html>
